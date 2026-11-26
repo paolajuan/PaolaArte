@@ -4,23 +4,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Paola Juan · Artista plástica</title>
-  <meta name="description" content="Soy Paola Juan, profesora de Grabado y artista plástica. Pinto acuarelas, hago grabado y alfarería en mi taller de campo. Conocé mis obras originales.">
+  <meta name="description" content="Soy Paola Juan, profesora de Grabado y artista plástica. Pinto acuarelas, hago grabado y alfarería en mi taller de campo. Obras originales, tazas, láminas y clases.">
+  <meta property="og:type" content="website">
   <meta property="og:title" content="Paola Juan · Artista plástica">
-  <meta property="og:description" content="Mis acuarelas originales, grabados y cerámicas, hechos en mi taller de campo.">
-  <meta property="og:image" content="img/obra-27.webp">
+  <meta property="og:description" content="Mis acuarelas originales, tazas, láminas y clases, hechos en mi taller de campo.">
+  <meta property="og:url" content="https://paolajuan.github.io/PaolaArte/">
+  <meta property="og:image" content="https://paolajuan.github.io/PaolaArte/img/obra-27.webp">
   <meta name="theme-color" content="#F6F1E8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300;1,9..144,400&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="#inicio">Paola Juan</a>
     <nav aria-label="Secciones">
       <a href="#obra">Obra</a>
+      <a href="#tienda">Tienda</a>
+      <a href="#clases">Clases</a>
       <a href="#sobre-mi">Sobre mí</a>
-      <a href="#taller">El taller</a>
       <a href="#contacto" class="nav-cta">Contacto</a>
     </nav>
   </header>
@@ -34,8 +38,13 @@
         <p class="lead">Pinto retratos, tazas, flores y escenas cotidianas a mano, en mi taller de campo, rodeada de huerta y naturaleza.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#obra">Ver la obra</a>
-          <a class="btn btn-whatsapp" href="https://wa.me/5491141575315?text=Hola%20Paola%2C%20me%20interesan%20tus%20obras." target="_blank" rel="noopener">Escribime por WhatsApp</a>
+          <a class="btn btn-whatsapp" data-wa="Hola Paola, me interesan tus obras." href="https://wa.me/5491141575315" target="_blank" rel="noopener">Escribime por WhatsApp</a>
         </div>
+        <ul class="trust">
+          <li>Obras originales y firmadas</li>
+          <li>Envíos a todo el país</li>
+          <li>Encargos personalizados</li>
+        </ul>
       </div>
       <div class="hero-art" aria-hidden="true">
         <img class="hero-img hero-img-a" src="img/obra-27.webp" alt="">
@@ -48,40 +57,97 @@
     <section id="obra" class="section">
       <div class="section-head">
         <p class="eyebrow">Obra</p>
-        <h2>Mis acuarelas</h2>
-        <p class="section-lead">Cada pieza es única: la pinto a mano y la enmarco yo. Tocá una obra para verla en grande.</p>
+        <h2>Mis láminas en acuarela</h2>
+        <p class="section-lead">Cada lámina es única: la pinto a mano y la entrego enmarcada. Tocá una obra para verla en grande.</p>
       </div>
 
-      <div class="filters" role="group" aria-label="Filtrar por colección">
+      <div class="filters" role="group" aria-label="Filtrar">
         <button class="filter is-active" data-filter="todas" aria-pressed="true">Todas</button>
         <button class="filter" data-filter="mujeres" aria-pressed="false">Mujeres y niñas</button>
         <button class="filter" data-filter="cotidiano" aria-pressed="false">Lo cotidiano</button>
         <button class="filter" data-filter="naturaleza" aria-pressed="false">Naturaleza</button>
+        <button class="filter" data-filter="disponibles" aria-pressed="false">Disponibles</button>
       </div>
 
+      <!-- Cada obra: data-title / data-size / data-price / data-status ("disponible" | "vendida") -->
       <ul class="gallery" id="gallery">
-        <li class="work" data-col="mujeres"><button><img src="img/obra-26.webp" alt="Acuarela: retrato de una mujer en tonos lilas y rosados" loading="lazy" width="720" height="1120"><span class="work-info"><span class="work-col">Mujeres y niñas</span><span class="work-tech">Acuarela</span></span></button></li>
-        <li class="work" data-col="cotidiano"><button><img src="img/obra-28.webp" alt="Acuarela: tres tazas apiladas sobre fondo turquesa" loading="lazy" width="720" height="1120"><span class="work-info"><span class="work-col">Lo cotidiano</span><span class="work-tech">Acuarela</span></span></button></li>
-        <li class="work" data-col="naturaleza"><button><img src="img/obra-32.webp" alt="Acuarela: ramo de flores de colores en un florero a rayas" loading="lazy" width="720" height="1120"><span class="work-info"><span class="work-col">Naturaleza</span><span class="work-tech">Acuarela</span></span></button></li>
-        <li class="work" data-col="mujeres"><button><img src="img/obra-24.webp" alt="Acuarela: niña de vestido rosa con un globo rojo" loading="lazy" width="720" height="1120"><span class="work-info"><span class="work-col">Mujeres y niñas</span><span class="work-tech">Acuarela</span></span></button></li>
-        <li class="work" data-col="mujeres"><button><img src="img/obra-27.webp" alt="Acuarela: perfil de mujer con los ojos cerrados y estrellas en el cabello" loading="lazy" width="720" height="1120"><span class="work-info"><span class="work-col">Mujeres y niñas</span><span class="work-tech">Acuarela</span></span></button></li>
-        <li class="work" data-col="cotidiano"><button><img src="img/obra-31.webp" alt="Acuarela: taza de café humeante" loading="lazy" width="720" height="1120"><span class="work-info"><span class="work-col">Lo cotidiano</span><span class="work-tech">Acuarela</span></span></button></li>
-        <li class="work" data-col="naturaleza"><button><img src="img/obra-35.webp" alt="Acuarela: hojas y vegetación en verdes y azules" loading="lazy" width="720" height="1120"><span class="work-info"><span class="work-col">Naturaleza</span><span class="work-tech">Acuarela</span></span></button></li>
-        <li class="work" data-col="mujeres"><button><img src="img/obra-23.webp" alt="Acuarela: figura femenina en rojo junto a una niña, con paspartú rojo" loading="lazy" width="720" height="1120"><span class="work-info"><span class="work-col">Mujeres y niñas</span><span class="work-tech">Acuarela</span></span></button></li>
-        <li class="work" data-col="mujeres"><button><img src="img/obra-33.webp" alt="Acuarela: retrato de mujer de cabello rosado con flores" loading="lazy" width="720" height="1120"><span class="work-info"><span class="work-col">Mujeres y niñas</span><span class="work-tech">Acuarela</span></span></button></li>
-        <li class="work" data-col="cotidiano"><button><img src="img/obra-29.webp" alt="Acuarela: dos tazas apiladas en tonos celestes" loading="lazy" width="720" height="1120"><span class="work-info"><span class="work-col">Lo cotidiano</span><span class="work-tech">Acuarela</span></span></button></li>
-        <li class="work" data-col="naturaleza"><button><img src="img/obra-25.webp" alt="Acuarela abstracta en azules intensos" loading="lazy" width="720" height="1120"><span class="work-info"><span class="work-col">Naturaleza</span><span class="work-tech">Acuarela</span></span></button></li>
-        <li class="work" data-col="mujeres"><button><img src="img/obra-30.webp" alt="Acuarela: figura de espaldas con los brazos abiertos, en rosas y amarillos" loading="lazy" width="720" height="1120"><span class="work-info"><span class="work-col">Mujeres y niñas</span><span class="work-tech">Acuarela</span></span></button></li>
-        <li class="work wide" data-col="mujeres"><button><img src="img/obra-34.webp" alt="Acuarela: niña en un patio junto a un árbol, con paspartú rojo" loading="lazy" width="900" height="720"><span class="work-info"><span class="work-col">Mujeres y niñas</span><span class="work-tech">Acuarela</span></span></button></li>
+        <li class="work" data-col="mujeres" data-status="disponible" data-title="Mirada lila" data-size="21 × 30 cm" data-price="$ 35.000"><img src="img/obra-26.webp" alt="Retrato de una mujer en tonos lilas y rosados" loading="lazy" width="720" height="1120"></li>
+        <li class="work" data-col="cotidiano" data-status="disponible" data-title="Tres tazas" data-size="15 × 21 cm" data-price="$ 25.000"><img src="img/obra-28.webp" alt="Tres tazas apiladas sobre fondo turquesa" loading="lazy" width="720" height="1120"></li>
+        <li class="work" data-col="naturaleza" data-status="disponible" data-title="Ramo de verano" data-size="21 × 30 cm" data-price="$ 35.000"><img src="img/obra-32.webp" alt="Ramo de flores de colores en un florero a rayas" loading="lazy" width="720" height="1120"></li>
+        <li class="work" data-col="mujeres" data-status="disponible" data-title="Globo rojo" data-size="15 × 21 cm" data-price="$ 25.000"><img src="img/obra-24.webp" alt="Niña de vestido rosa con un globo rojo" loading="lazy" width="720" height="1120"></li>
+        <li class="work" data-col="mujeres" data-status="disponible" data-title="Soñar despierta" data-size="21 × 30 cm" data-price="$ 35.000"><img src="img/obra-27.webp" alt="Perfil de mujer con los ojos cerrados y estrellas en el cabello" loading="lazy" width="720" height="1120"></li>
+        <li class="work" data-col="cotidiano" data-status="disponible" data-title="Café de la tarde" data-size="10 × 15 cm" data-price="$ 15.000"><img src="img/obra-31.webp" alt="Taza de café humeante" loading="lazy" width="720" height="1120"></li>
+        <li class="work" data-col="naturaleza" data-status="disponible" data-title="Monte" data-size="21 × 30 cm" data-price="$ 35.000"><img src="img/obra-35.webp" alt="Hojas y vegetación en verdes y azules" loading="lazy" width="720" height="1120"></li>
+        <li class="work" data-col="mujeres" data-status="disponible" data-title="Abrazo" data-size="15 × 21 cm" data-price="$ 25.000"><img src="img/obra-23.webp" alt="Figura femenina en rojo junto a una niña, con paspartú rojo" loading="lazy" width="720" height="1120"></li>
+        <li class="work" data-col="mujeres" data-status="disponible" data-title="Flores en el pelo" data-size="21 × 30 cm" data-price="$ 35.000"><img src="img/obra-33.webp" alt="Retrato de mujer de cabello rosado con flores" loading="lazy" width="720" height="1120"></li>
+        <li class="work" data-col="cotidiano" data-status="vendida" data-title="Tazas apiladas" data-size="15 × 21 cm" data-price=""><img src="img/obra-29.webp" alt="Dos tazas apiladas en tonos celestes" loading="lazy" width="720" height="1120"></li>
+        <li class="work" data-col="naturaleza" data-status="vendida" data-title="Agua" data-size="13 × 18 cm" data-price=""><img src="img/obra-25.webp" alt="Acuarela abstracta en azules intensos" loading="lazy" width="720" height="1120"></li>
+        <li class="work" data-col="mujeres" data-status="disponible" data-title="Libre" data-size="15 × 21 cm" data-price="$ 25.000"><img src="img/obra-30.webp" alt="Figura de espaldas con los brazos abiertos, en rosas y amarillos" loading="lazy" width="720" height="1120"></li>
       </ul>
 
       <div class="buy-note">
-        <p><strong>¿Te gustó alguna obra?</strong> Escribime para consultar disponibilidad, precio y envío. También hago trabajos enmarcados y por encargo.</p>
-        <div class="btn-row">
-          <a class="btn btn-whatsapp" href="https://wa.me/5491141575315?text=Hola%20Paola%2C%20me%20interesan%20tus%20obras." target="_blank" rel="noopener">Consultar por WhatsApp</a>
-          <a class="btn btn-ghost" href="https://www.instagram.com/paolajuan_arte/" target="_blank" rel="noopener">Instagram</a>
+        <div>
+          <h3>Cómo comprar</h3>
+          <ul class="how">
+            <li><strong>Escribime</strong> por WhatsApp con la obra que te gustó.</li>
+            <li><strong>Pagás</strong> por transferencia o Mercado Pago.</li>
+            <li><strong>Te la envío</strong> enmarcada y protegida a todo el país, o la retirás en mi taller.</li>
+          </ul>
+        </div>
+        <a class="btn btn-whatsapp" data-wa="Hola Paola, quiero hacerte un encargo personalizado." href="https://wa.me/5491141575315" target="_blank" rel="noopener">¿Querés un encargo?</a>
+      </div>
+    </section>
+
+    <!-- TIENDA -->
+    <section id="tienda" class="section shop">
+      <div class="section-head">
+        <p class="eyebrow">Tienda</p>
+        <h2>Para regalar <em>(o regalarte)</em></h2>
+        <p class="section-lead">Tazas, calendarios y señaladores con mis acuarelas, en ediciones limitadas. Mis láminas originales están en <a href="#obra">Obra</a>.</p>
+      </div>
+      <ul class="products">
+        <li class="product" data-title="Taza Rostros" data-price="$ 12.000"><img src="img/tienda/taza-rostros.webp" alt="Taza de cerámica con una acuarela de rostros" loading="lazy" width="640" height="800"><span class="tag">Edición limitada</span></li>
+        <li class="product" data-title="Taza Flores" data-price="$ 12.000"><img src="img/tienda/taza-flores.webp" alt="Taza de cerámica con una acuarela de flores" loading="lazy" width="640" height="800"></li>
+        <li class="product" data-title="Taza Azul" data-price="$ 12.000"><img src="img/tienda/taza-azul.webp" alt="Taza de cerámica con un retrato en azules" loading="lazy" width="640" height="800"></li>
+        <li class="product" data-title="Taza serie Pensar" data-price="$ 12.000" data-note="Por pedido, personalizable"><img src="img/tienda/taza-pensar.webp" alt="Taza blanca de la serie Pensar con ilustración en línea" loading="lazy" width="640" height="800"><span class="tag">Personalizable</span></li>
+        <li class="product" data-title="Calendario 2026" data-price="$ 9.000" data-note="Papel ilustración 240 g"><img src="img/tienda/calendario-2026.webp" alt="Calendario 2026 ilustrado con una acuarela" loading="lazy" width="640" height="800"><span class="tag tag-new">Nuevo</span></li>
+        <li class="product" data-title="Señaladores" data-price="$ 5.000" data-note="Acuarela y microfibra, originales"><img src="img/tienda/senaladores.webp" alt="Dos señaladores pintados a mano con acuarela y microfibra" loading="lazy" width="640" height="800"></li>
+      </ul>
+    </section>
+
+    <!-- CLASES -->
+    <section id="clases" class="section classes">
+      <div class="classes-intro">
+        <img src="img/obra-34.webp" alt="Una de mis acuarelas: niña en un patio junto a un árbol" loading="lazy" width="900" height="720">
+        <div>
+          <p class="eyebrow">Clases</p>
+          <h2>Aprendé acuarela conmigo</h2>
+          <p>Fui docente de arte durante 28 años y me encanta enseñar. Mis clases son en grupos chicos, a tu ritmo y con todos los materiales incluidos. No hace falta experiencia previa.</p>
         </div>
       </div>
+      <ul class="class-list">
+        <li class="class-card">
+          <p class="class-when">Sábados 6, 13, 20 y 27 de diciembre · 10 a 12 h</p>
+          <h3>Acuarela para principiantes</h3>
+          <p>4 encuentros para perderle el miedo al agua: manchas, mezclas, flores y un paisaje terminado para llevarte.</p>
+          <ul class="class-meta"><li>En mi taller</li><li>Materiales incluidos</li><li>Cupo: 6 personas</li></ul>
+          <div class="class-foot"><span class="class-price">$ 48.000 <small>el ciclo</small></span><a class="btn btn-whatsapp btn-sm" data-wa="Hola Paola, quiero inscribirme en Acuarela para principiantes (sábados de diciembre)." href="https://wa.me/5491141575315" target="_blank" rel="noopener">Reservar lugar</a></div>
+        </li>
+        <li class="class-card">
+          <p class="class-when">Martes · 18 a 19:30 h · desde el 2 de diciembre</p>
+          <h3>Acuarela online</h3>
+          <p>Clases en vivo por videollamada, con una lámina nueva cada semana y devolución personalizada de tus trabajos.</p>
+          <ul class="class-meta"><li>Online</li><li>4 clases por mes</li><li>Cupo: 8 personas</li></ul>
+          <div class="class-foot"><span class="class-price">$ 30.000 <small>por mes</small></span><a class="btn btn-whatsapp btn-sm" data-wa="Hola Paola, quiero inscribirme en las clases de Acuarela online." href="https://wa.me/5491141575315" target="_blank" rel="noopener">Reservar lugar</a></div>
+        </li>
+        <li class="class-card">
+          <p class="class-when">Sábado 13 de diciembre · 15 a 18 h</p>
+          <h3>Taller de grabado: monocopia</h3>
+          <p>Un encuentro para descubrir el grabado, mi primer amor artístico. Te llevás tres estampas propias.</p>
+          <ul class="class-meta"><li>En mi taller</li><li>Encuentro único</li><li>Cupo: 6 personas</li></ul>
+          <div class="class-foot"><span class="class-price">$ 20.000</span><a class="btn btn-whatsapp btn-sm" data-wa="Hola Paola, quiero inscribirme en el Taller de grabado del 13 de diciembre." href="https://wa.me/5491141575315" target="_blank" rel="noopener">Reservar lugar</a></div>
+        </li>
+      </ul>
     </section>
 
     <!-- SOBRE MI -->
@@ -93,45 +159,27 @@
         <p class="eyebrow">Sobre mí</p>
         <h2>Soy Paola Juan</h2>
         <p>Soy profesora de Grabado y fui <strong>docente de arte durante 28 años</strong> en nivel primario y secundario, principalmente en escuelas rurales: verdaderas usinas de creatividad. Desde 2022 me dedico de lleno a mi pasión por el arte.</p>
-        <p>Hoy pinto en acuarela, hago alfarería, aprendo ilustración y sigo con el grabado, mi primer amor artístico. Decidí profesionalizar mi pasión e invertí en un taller amplio en mi casa de campo, donde cada obra refleja una búsqueda constante de aprendizaje.</p>
+        <p>Hoy pinto en acuarela, hago alfarería, aprendo ilustración y sigo con el grabado, mi primer amor artístico. Trabajo en un taller amplio en mi casa de campo, donde cada obra refleja una búsqueda constante de aprendizaje.</p>
         <blockquote>“Hago del arte un camino de crecimiento constante, donde el proceso es tan importante como la obra terminada.”</blockquote>
-        <p>A los 17 años decidí estudiar Bellas Artes. Aunque nunca dejé de crear, dediqué muchos años a la docencia y a la maternidad. Ahora, con más tiempo, vuelvo a sumergirme en mi obra personal y comparto mis procesos y mi vida cotidiana atravesada por el arte.</p>
         <ul class="facts">
           <li><span class="fact-num">28</span><span class="fact-txt">años enseñando arte</span></li>
-          <li><span class="fact-num">2022</span><span class="fact-txt">dedicada de lleno a crear</span></li>
           <li><span class="fact-num">4</span><span class="fact-txt">técnicas: acuarela, grabado, alfarería e ilustración</span></li>
+          <li><span class="fact-num">2022</span><span class="fact-txt">dedicada de lleno a crear</span></li>
         </ul>
       </div>
-    </section>
-
-    <!-- TALLER -->
-    <section id="taller" class="section workshop">
-      <div class="section-head">
-        <p class="eyebrow">El taller</p>
-        <h2>Mucho más que acuarela</h2>
-        <p class="section-lead">Aprendí el valor de los procesos con el grabado y la cerámica, y trato de que se note en cada pieza.</p>
-      </div>
-      <ul class="crafts">
-        <li><h3>Acuarela</h3><p>Pinto las colecciones Mujeres y niñas, Lo cotidiano, Naturaleza, Geometría y Paisajes, en formatos desde 10 × 10 cm hasta gran formato.</p></li>
-        <li><h3>Grabado</h3><p>Mi primer amor artístico y la base de mi formación como profesora.</p></li>
-        <li><h3>Alfarería</h3><p>Hago piezas de cerámica a mano en mi taller.</p></li>
-        <li><h3>Tazas de autora</h3><p>Tazas de cerámica sublimadas con mis diseños. La serie “Pensar” la hago por pedido y se puede personalizar.</p></li>
-        <li><h3>Libros y mini libros</h3><p>Un libro álbum musical con grabados, historias familiares en acuarela y tinta, y mini libros ilustrados.</p></li>
-        <li><h3>Calendarios y señaladores</h3><p>Diseños originales en acuarela, ideales para regalar.</p></li>
-      </ul>
     </section>
 
     <!-- CONTACTO -->
     <section id="contacto" class="section contact">
       <h2>¿Te gustaría tener una de mis obras?</h2>
-      <p>Escribime para consultar por obras disponibles, trabajos enmarcados, tazas personalizadas o encargos.</p>
+      <p>Escribime para consultar por obras disponibles, encargos, tazas personalizadas o clases.</p>
       <div class="btn-row">
-        <a class="btn btn-whatsapp" href="https://wa.me/5491141575315?text=Hola%20Paola%2C%20me%20interesan%20tus%20obras." target="_blank" rel="noopener">WhatsApp · 11 4157-5315</a>
+        <a class="btn btn-whatsapp" data-wa="Hola Paola, me interesan tus obras." href="https://wa.me/5491141575315" target="_blank" rel="noopener">WhatsApp · 11 4157-5315</a>
         <a class="btn btn-light" href="https://www.instagram.com/paolajuan_arte/" target="_blank" rel="noopener">Instagram · @paolajuan_arte</a>
       </div>
     </section>
 
-    <a class="wa-float" href="https://wa.me/5491141575315?text=Hola%20Paola%2C%20me%20interesan%20tus%20obras." target="_blank" rel="noopener" aria-label="Escribime por WhatsApp">
+    <a class="wa-float" data-wa="Hola Paola, me interesan tus obras." href="https://wa.me/5491141575315" target="_blank" rel="noopener" aria-label="Escribime por WhatsApp">
       <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.8-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.8-1.8-5.9C5.1 9.9 10 5.1 16 5.1s10.9 4.8 10.9 10.7S22 26.4 16 26.4zm6-8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1c-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.8 1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
     </a>
   </main>
@@ -152,6 +200,6 @@
     <button class="viewer-nav viewer-next" aria-label="Obra siguiente">›</button>
   </dialog>
 
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>
